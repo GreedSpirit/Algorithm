@@ -6,5 +6,7 @@ int main() {
     double N;
     cin >> N;
 
+    cout << fixed;
+    cout.precision(1);
     cout << N * ft;
 }
