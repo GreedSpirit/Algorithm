@@ -7,5 +7,5 @@ int main() {
 
     cin >> a >> ch >> b >> ch >> c;
 
-    cout << c << '.' << b << '.' << a;
+    cout << c << '.' << a << '.' << b;
 }
