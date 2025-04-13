@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
     int n[10];
+    bool chk = 0;
 
     double total;
     int cnt;
@@ -13,16 +14,28 @@ int main() {
         cin >> n[i];
         total += n[i];
         cnt++;
-        if(n[i] >= 250) break;
+        if(n[i] >= 250){
+            chk = 1;
+            break;
+        }
     }
 
-    total -= n[cnt - 1];
-    cout << total << ' ';
+    if(chk){
+        total -= n[cnt - 1];
+        cout << total << ' ';
 
-    total /= cnt - 1;
-    cout << fixed;
-    cout.precision(1);
-    cout << total;
+        total /= cnt - 1;
+        cout << fixed;
+        cout.precision(1);
+        cout << total;
+    }
+    else{
+        cout << total << ' ';
 
+        total /= cnt;
+        cout << fixed;
+        cout.precision(1);
+        cout << total;
+    }
     
 }
