@@ -14,7 +14,7 @@ int main() {
     n = 30;
 
     m = max(m , max(sl, max(tl, rl)));
-    n = min(n , min(sl, max(tl, rl)));
+    n = min(n , min(sl, min(tl, rl)));
 
     cout << m - n;
 }
