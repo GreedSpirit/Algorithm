@@ -18,10 +18,12 @@ int main() {
 
     if(lc >= rc){
         int cnt = lc - rc;
+        cnt = cnt % a.length();
         cout << a.substr(cnt) + a.substr(0, cnt);
     }
     else{
         int cnt = rc - lc;
+        cnt = cnt % a.length();
         cout << a.substr(a.length() - cnt) + a.substr(0, a.length() - cnt);
     }
 
