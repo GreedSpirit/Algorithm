@@ -5,7 +5,7 @@ int main() {
     string s;
     int q;
     cin >> s >> q;
-    string tmp = "";
+    string tmp = s;
 
     while(q--){
         int n;
