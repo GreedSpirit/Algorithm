@@ -22,7 +22,7 @@ bool cmp(const Info& a, const Info& b){
 }
 
 bool cmp2(const Info& a, const Info& b){
-    return a.h < b.h;
+    return a.h > b.h;
 }
 
 
@@ -31,16 +31,24 @@ int main(){
 
     for(int i = 0; i < 5; i++){
         string s;
-        int i;
+        int i1;
         float i2;
-        v[i] = Info(s, i, i2);
+        cin >> s >> i1 >> i2;
+        v[i] = Info(s, i1, i2);
     }
 
     sort(v.begin(), v.end(), cmp);
 
     cout << "name" << '\n';
     for(auto a : v){
-        cout << a.name << ' ' << a.h << ' ' << a.w >> '\n';
+        cout << a.name << ' ' << a.h << ' ' << a.w << '\n';
     }
+    cout << '\n';
 
+    sort(v.begin(), v.end(), cmp2);
+
+    cout << "height" << '\n';
+    for(auto a : v){
+        cout << a.name << ' ' << a.h << ' ' << a.w << '\n';
+    }
 }
