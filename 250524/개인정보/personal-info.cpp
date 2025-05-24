@@ -39,6 +39,8 @@ int main(){
 
     sort(v.begin(), v.end(), cmp);
 
+    cout << fixed << setprecision(1);
+
     cout << "name" << '\n';
     for(auto a : v){
         cout << a.name << ' ' << a.h << ' ' << a.w << '\n';
