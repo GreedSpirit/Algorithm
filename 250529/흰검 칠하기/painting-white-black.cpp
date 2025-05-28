@@ -8,11 +8,11 @@ int main(void){
     int n;
     cin >> n;
 
-    int arrw[20000] = {};
-    int arrb[20000] = {};
-    int arr[20000] = {}; // 0 빈 상태 1 흰 색 2 검은색 3 회색
+    int arrw[200000] = {};
+    int arrb[200000] = {};
+    int arr[200000] = {}; // 0 빈 상태 1 흰 색 2 검은색 3 회색
 
-    int cur = 10000;
+    int cur = 100000;
 
     while(n--){
         int x;
