@@ -20,22 +20,18 @@ int main(void){
         cin >> x >> dir;
 
         if(dir == 'L'){
-            for(int i = cur - 1; i >= cur - x; i--){
-                if(arr[i] == 0 || arrb[i] == 1){
-                    arr[i] = 1;
-                }
+            for(int i = cur; i >= cur - x + 1; i--){
+                arr[i] = 1;
                 arrw[i]++;
             }
-            cur = cur - x;
+            cur = cur - x + 1;
         }
         else{
-            for(int i = cur; i < cur + x; i++){
-                if(arr[i] == 0 || arrw[i] == 1){
-                    arr[i] = 2;
-                }
+            for(int i = cur; i <= cur + x - 1; i++){
+                arr[i] = 2;
                 arrb[i]++;
             }
-            cur = cur + x;
+            cur = cur + x - 1;
         }
     }
 
