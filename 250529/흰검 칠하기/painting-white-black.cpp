@@ -38,7 +38,7 @@ int main(void){
     int answ = 0;
     int ansb = 0;
     int ans = 0;
-    for(int i = 0; i < 20000; i++){
+    for(int i = 0; i < 200000; i++){
         if(arrw[i] >= 2 && arrb[i] >= 2){
             arr[i] = 3;
         }
