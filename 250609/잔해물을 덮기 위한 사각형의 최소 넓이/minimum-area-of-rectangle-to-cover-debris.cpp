@@ -7,6 +7,8 @@ int main() {
 
     int x1, y1, x2, y2;
 
+    bool found = false;
+
     cin >> x1 >> y1 >> x2 >> y2;
     for(int i = x1 + 1000; i < x2 + 1000; i++){
         for(int j = y1 + 1000; j < y2 + 1000; j++){
@@ -30,12 +32,18 @@ int main() {
     for(int i = 0; i < 2000; i++){
         for(int j = 0; j < 2000; j++){
             if(arr[i][j]){
+                found = true;
                 maxx = max(maxx, i);
                 minx = min(minx, i);
                 maxy = max(maxy, j);
                 miny = min(miny, j);
             }
         }
+    }
+
+    if(!found){
+        cout << 0;
+        return 0;
     }
 
     cout << (maxx + 1 - minx) * (maxy + 1 - miny);
