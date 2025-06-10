@@ -20,6 +20,7 @@ int main() {
         }
         tmp = x;
     }
+    ans = max(ans, cnt);
     cout << ans;
 
 }
