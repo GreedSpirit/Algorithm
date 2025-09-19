@@ -67,7 +67,7 @@ int main(void){
 
     while(true){
         if(arr[x][y] == '\\'){
-            if(dir == 0 || dir == 3){
+            if(dir == 0 || dir == 2){
                 ans++;
                 dir = (dir + 1) % 4;
             }
@@ -78,7 +78,7 @@ int main(void){
             
         }
         else if(arr[x][y] == '/'){
-            if(dir == 0 || dir == 1){
+            if(dir == 0 || dir == 2){
                 ans++;
                 dir = (dir + 3) % 4;
             }
