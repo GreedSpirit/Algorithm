@@ -22,7 +22,7 @@ int main(void){
     int dir = 0;
 
     for(int i = 1; i <= N * M; i++){
-        arr[x][y] = (i - 1) % (int)'A' + (int)'A';
+        arr[x][y] = (i - 1) % (int)'Z' + (int)'A';
         int nx = x + dx[dir];
         int ny = y + dy[dir];
 
