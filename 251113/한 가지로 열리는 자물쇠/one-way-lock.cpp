@@ -1,38 +1,32 @@
 #include <iostream>
+#include <cmath> 
 
 using namespace std;
 
 int N;
 int a, b, c;
 
-int outn(int n){
-    if(n == 1){
-        return 3;
-    }
-    else if(n == 2){
-        return 4;
-    }
-    else if(n == N){
-        return 3;
-    }
-    else if(n == N - 1){
-        return 4;
-    }
-    else {
-        return 5;
-    }
+bool is_close(int n1, int n2) {
+    return abs(n1 - n2) <= 2;
 }
 
 int main() {
     cin >> N;
     cin >> a >> b >> c;
 
-    int ans = N * N * N;
+    int ans = 0;
 
-    ans = ans - ((N - outn(a)) * (N - outn(b)) * (N - outn(c)));
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            for (int k = 1; k <= N; k++) {
+                
+                if (is_close(i, a) || is_close(j, b) || is_close(k, c)) {
+                    ans++; 
+                }
+            }
+        }
+    }
+
     cout << ans;
-
-    // Please write your code here.
-
     return 0;
 }
